@@ -1,0 +1,169 @@
+html {
+  box-sizing: border-box;
+}
+
+/*ignore color schheme, will probably change */
+/*Need permission for photo*/
+/*
+body {
+  background: url(../images/classroom.jpg) no-repeat center top;
+  background-size: cover;
+  font-family: 'Open Sans', sans-serif;
+}
+*/
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+header .box {
+  background-color: #033048;
+  height: 75px;
+  min-width: 100px;
+  position: relative;
+  color: #f9e42e;
+  font-size: 20px;
+  font-weight: 400;
+  margin-right: 60px;
+  padding-top: 40px;
+}
+
+.boxLogo {
+  color: white;
+  margin-left: 5px;
+  position: relative;
+  height: 75px;
+  min-width: 100px;
+  font-size: 38px;
+  font-weight: 900;
+  padding: 20px;
+}
+
+.box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+header {
+  background-color: #033048;
+  height: 75px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav {
+  display: flex
+}
+
+.headline p {
+  text-align: center;
+  color: black;
+}
+
+.main {
+  font-size: 44px;
+  margin-top: 400px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  font-weight: 900;
+}
+
+.secondary {
+  font-size: 24px;
+  font-weight: 400;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.yellowBackground {
+  width: 100%;
+  background-color: #f9e42e;
+  height: 220px;
+}
+
+.pellDescription {
+  width: 60%;
+  margin: auto;
+  padding-top: 30px;
+}
+
+.testimonial {
+  width: 100%;
+  background-color: #033048;
+  display: flex;
+  flex-direction: column;
+  height: 120px;
+}
+
+.quote {
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  font-style: italic;
+  padding: 0 30px;
+}
+
+.name {
+  color: white;
+  text-align: right;
+  padding-right: 100px;
+  font-size: 24px;
+  font-weight: 400;
+  margin-top: -8px;
+}
+
+button {
+  background-color: #f9e42e;
+  font-size: 20px;
+  border-radius: 5px;
+  color: black;
+  font-weight: bold;
+  height: 44px;
+  width: 20%;
+  margin: auto;
+}
+
+.darkGreyBackground {
+  width: 100%;
+  background-color: #121212;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  height: 220px;
+}
+
+.logoTwo {
+  text-align: center;
+  font-weight: 900;
+  font-size: 24px;
+  color: #f9e42e;
+  padding: 10px;
+}
+
+.socialMedia {
+  text-align: center;
+}
+
+.fa {
+  padding: 10px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+}
+
+footer {
+  color: white;
+  font-size: 9px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 20px;
+}
