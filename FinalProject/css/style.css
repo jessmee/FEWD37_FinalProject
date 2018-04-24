@@ -6,7 +6,7 @@ html {
 /*Need permission for photo*/
 
 body {
-  background: url(../images/classroom.jpg) no-repeat center top;
+  background: url(../images/cornellPrison.jpg) no-repeat center top; /*photo credit: http://www.rochester.edu/newscenter/rochesters-prison-education-program-aims-to-transform-lives-of-inmates-undergraduates/ */
   background-size: cover;
   font-family: 'Open Sans', sans-serif;
 }
@@ -41,8 +41,8 @@ header .box {
   position: relative;
   min-height: 75px;
   min-width: 100px;
-  font-size: 38px;
-  font-weight: 900;
+  font-size: 34px;
+  font-weight: 700;
   padding: 20px;
 }
 
@@ -77,6 +77,7 @@ header .box {
 @media(min-width: 768px) {
   .largeScreen {
     display: flex;
+    margin-left: 110px;
   }
 }
 
@@ -158,17 +159,25 @@ h1 {
   text-align: center;
 }
 
-button {
-  background-color: #f9e42e;
-  font-size: 20px;
-  border-radius: 5px;
-  color: black;
-  font-weight: bold;
-  height: 44px;
-  width: 20%;
-  margin: auto;
+@media(min-width: 320px) {
+  button {
+    background-color: #f9e42e;
+    font-size: 16px;
+    border-radius: 5px;
+    color: black;
+    font-weight: bold;
+    height: 44px;        
+    width: 40%;
+    margin: auto;
+  }
 }
-/*make button responsive*/
+
+@media(min-width: 768px) {
+  button {
+    width: 20%;
+    margin: auto;
+  }
+}
 
 @media(min-width: 320px) {
   .darkGreyBackground { /*changename */
@@ -196,14 +205,37 @@ button {
   list-style-type: none;
 }
 
-.Twitter { /*make this responsive*/
-  margin-left: 575px;
-  margin-right: 20px;
+@media(min-width: 320px) {
+  .socialMedia {
+    width: 50%;
+    margin: auto;
+  }
+  .Facebook {
+    margin-left: 15px;
+  }  
 }
 
-.Facebook {
-  margin-right: 575px;
-  margin-left: 25px;
+@media(min-width: 375px) {
+  .socialMedia {
+    width: 45%;
+    margin: auto;
+  }
+  .Facebook {
+    margin-left: 20px;    
+  }
+}
+
+@media(min-width: 414px) {
+  .Facebook {
+    margin-left: 35px;    
+  }
+}
+
+@media(min-width: 768px) {
+  .socialMedia {
+    width: 25%;
+    margin: auto; 
+  }
 }
 
 #top {
