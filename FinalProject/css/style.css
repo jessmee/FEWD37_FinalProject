@@ -6,8 +6,8 @@ html {
 /*Need permission for photo*/
 
 body {
-  background: url(../images/cornellPrison.jpg) no-repeat center top; /*photo credit: http://www.rochester.edu/newscenter/rochesters-prison-education-program-aims-to-transform-lives-of-inmates-undergraduates/ */
-  background-size: cover;
+/*  background: url(../images/cornellPrison.jpg) no-repeat center top; /*photo credit: http://www.rochester.edu/newscenter/rochesters-prison-education-program-aims-to-transform-lives-of-inmates-undergraduates/ */
+  /*background-size: cover; */ 
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -81,24 +81,43 @@ header .box {
   }
 }
 
-.headline p {
-  text-align: center;
-  color: antiquewhite;
+.headline {
+  background-color: grey;
+  height: 600px;
 }
 
-.main {
+.container {
+  display: flex;
+}
+#cornellPrison {
+  width:700px;
+  height: 400px;
+  margin-top: 60px;
+  margin-left: 80px;
+}
+
+.cornellPrisonBlurb {
+  width: 450px;
+  padding: 20px;
+  float: right; /*need to do flexbox for this. */
+}
+
+.container .cornellPrisonBox {
+  flex-grow: 1;
+}
+
+.first {
   font-size: 44px;
-  margin-top: 400px;
+  font-weight:900;
+  text-align: center;  
   margin-bottom: 0;
-  padding-bottom: 0;
-  font-weight: 900;
 }
 
 .secondary {
   font-size: 24px;
   font-weight: 400;
+  text-align: center;  
   margin-top: 0;
-  padding-top: 0;
 }
 
 @media(min-width: 320px) {
@@ -139,7 +158,7 @@ header .box {
 }
 
 .quote {
-  color: #e3e4fa;
+  color: black;
   font-size: 20px;
   font-weight: 700;
   font-style: italic;
@@ -147,7 +166,7 @@ header .box {
 }
 
 .name {
-  color: #e3e4fa;
+  color: black;
   text-align: right;
   padding-right: 100px;
   font-size: 24px;
@@ -159,25 +178,56 @@ h1 {
   text-align: center;
 }
 
-@media(min-width: 320px) {
+.takeaction {
+  color: white;
+  text-align: center;
+  font-weight: 900;
+  font-size: 28px;
+}
+
+.takeActionForm {
+  width: 40%;
+  margin-right: auto;
+  margin-left: auto;
+  border: white dashed 4px; 
+  padding: 10px;
+}
+
+.takeActionForm p {
+  text-align: center;
+}    
+
+/*form {
+  width: 40%;
+  margin-right: auto;
+  margin-left: auto;
+}
+*/
+
+
+
+
+
+
+/*@media(min-width: 320px) { */
   button {
     background-color: #f9e42e;
     font-size: 16px;
     border-radius: 5px;
     color: black;
     font-weight: bold;
-    height: 44px;        
-    width: 40%;
-    margin: auto;
+    width: 200px;
   }
-}
 
-@media(min-width: 768px) {
+
+/*@media(min-width: 768px) {
   button {
-    width: 20%;
-    margin: auto;
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
+*/
 
 @media(min-width: 320px) {
   .darkGreyBackground { /*changename */
@@ -186,7 +236,7 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    height: 220px;
+    min-height: 220px;
   }
 }
 
@@ -243,6 +293,44 @@ h1 {
   font-size: 20px;
   font-weight: 800;
   margin: 20px 20px 5px;
+}
+
+/******THIS IS FOR THE FORM*******/
+
+
+
+body {
+  font-family: Helvetica, Arial, sans-seif;
+}
+
+button,
+input[type="text"],
+textarea {
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+
+button {
+  padding: 8px 16px;
+  text-transform: uppercase; /*what is this?*/
+}
+
+form > div {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: baseline;
+}
+
+label,
+button {
+  cursor: pointer;
+}
+
+
+#signUp {
+  display: none;
+  padding: 10px;
+  margin: 10px 0;
 }
 
 

@@ -13,12 +13,12 @@
 </head>
 <body>
 <header>
-  <div class="boxLogo">Second Chance</div> <!--Need to think of Content-->
+  <div class="boxLogo">Up with Education,</br> Down with Incarceration</div> <!--Need to think of Content-->
   <nav>
     <ul class="largeScreen">
-      <li class="box">History</li> 
+      <li class="box" id="history">History</li> 
       <li class="box" id="schools">Participating Schools</li> 
-      <li class="box">Get Involved</li>
+      <li class="box" id="action">Take Action</li>
     </ul>
     <ul class="smallScreen">
         <li class="box">History</li> 
@@ -28,8 +28,21 @@
   </nav>
 </header>
 <div class="headline">
-  <p class="main">The Second Chance Pell Pilot Program</p>
-  <p class="secondary">Expanding educational opportunities is crucial and necessary for criminal justice reform.</p>
+  <div class="flexBox">
+    <p class="first">The Second Chance Pell Pilot Program</p>
+    <p class="secondary">Expanding educational opportunities is crucial and necessary for criminal justice reform.</p>    
+  </div>
+  <section class="container">
+    <div class="cornellPrisonBox">
+      <img id="cornellPrison" src="images/cornellPrison.jpg" alt="A classroom in prison">
+    </div>
+    <div class="cornellPrisonBox">    
+      <div class="cornellPrisonBlurb">
+        <h2 class="titleCornell"></h2>
+        <p class="descriptionCornell"></p>       
+      </div>
+    </div>  
+  </section>
 </div>
 <div class="yellowBackground">
   <p class="pellDescription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit voluptatem, sit exercitationem minus vero 
@@ -63,7 +76,34 @@
   <!--Interactive Map goes here-->
 </div>
 <footer class="darkGreyBackground">
-  <button class="takeaction">Take Action</button>
+  <p class="takeaction">Take Action!</p>
+  <div class="takeActionForm"> 
+    <p>Please sign up if you would like to be added to our mailing list!</p>
+    <form>
+      <div>
+        <label>
+          First Name:
+          <input type="text" id="firstname"/>      
+        </label>
+      </div>
+      <div>
+        <label>
+          Last Name:
+          <input type="text" id="lastname"/>
+        </label>
+      </div>
+      <div>
+        <label>
+          E-Mail:
+          <input type="text" id="email"/>        
+        </label>
+      </div>
+      <div class="signUpButton">
+        <button type="submit">Sign me up!</button>
+      </div>
+      <div id="signUp" class="error"></div>      
+  </form>  
+  </div> 
   <div class="socialMedia">
 		<ul class="social">
       <li class="Twitter">
