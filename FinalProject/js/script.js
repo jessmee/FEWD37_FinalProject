@@ -84,18 +84,74 @@ function initMap(){
   var map = new
   google.maps.Map(document.getElementById('schoolMap'), options);
 
-  
+  /* This is too long!
   //Add Marker
   var marker = new google.maps.Marker({
     position:{lat:29.4238, lng:-95.24},
     map: map
   });
-  
-  var marker = new google.maps.Marker({   
-    position:{lat:38.96, lng:-76.54},
-    map: map
+
+  //Info Window
+  var infoWindow = new google.maps.InfoWindow({
+    content: '<h2>Alvin Community College</h2>'
+  });
+
+  marker.addListener('click', function(){
+    infoWindow.open(map, marker);
   });
 }
+*/
+
+    addMarker({coords: {lat:29.42, lng:-95.24},
+      content: '<h3>Alvin Community College</h3>'
+    });
+    addMarker({coords: {lat:38.95, lng:-76.55},
+      content: '<h3>Anne Arundel Community College</h3>'
+    });
+    addMarker({coords: {lat:35.84, lng:-90.67},
+      content: '<h3>Arkansas State University - Newport</h3>'
+    });
+    addMarker({coords: {lat:40.86, lng:-82.32},
+      content: '<h3>Ashland University</h3>'
+    });
+    addMarker({coords: {lat:42.00, lng:-72.57},
+      content: '<h3>Asnuntuck Community College</h3>'
+    });
+    addMarker({coords: {lat:32.59, lng:-85.50},
+      content: '<h3>Auburn University</h3>'
+    });
+    addMarker({coords: {lat:42.02, lng:-73.91},
+      content: '<h3>Bard College</h3>'
+    });
+    addMarker({coords: {lat:42.92, lng:-73.24},
+      content: '<h3>Bennington College</h3>'
+    });
+    addMarker({coords: {lat:41.00, lng:-76.45},
+      content: '<h3>Bloomsburg University of Pennsylvania</h3>'
+    });
+
+//Add Marker Function to make this shorter
+
+function addMarker(props){
+  var marker = new google.maps.Marker({
+  position: props.coords,
+  map:map  
+});
+
+//check for content
+if(props.content){
+  var infoWindow = new google.maps.InfoWindow({
+    content: props.content
+  });
+
+  marker.addListener('click', function(){
+    infoWindow.open(map, marker);
+  });  
+}
+}
+}
+
+
 
 $('.readmore').click(readMore);
 $('.readless').click(readLess);
