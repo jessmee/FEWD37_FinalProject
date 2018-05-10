@@ -2,9 +2,6 @@ html {
   box-sizing: border-box;
 }
 
-/*ignore color schheme, will probably change */
-/*Need permission for photo*/
-
 body {
 /*  background: url(../images/cornellPrison.jpg) no-repeat center top; /*photo credit: http://www.rochester.edu/newscenter/rochesters-prison-education-program-aims-to-transform-lives-of-inmates-undergraduates/ */
   /*background-size: cover; */ 
@@ -21,22 +18,23 @@ a {
 
 .hide {
   display: none;
+  color: #d3d3d3;  
 }
 
 header .box {
-  background-color: #2a527b;
+  background-color: c#885EAD;
   min-height: 75px;
   min-width: 100px;
   position: relative;
-  color: #f9e42e;
+  color: #3b1261;     
   font-size: 20px;
-  font-weight: 400;
-  margin-right: 100px;
+  font-weight: 700;
+  margin-right: 50px;
   padding-top: 40px;
 }
 
 .boxLogo {
-  color: white;
+  color: #D3D3D3;
   margin-left: 5px;
   position: relative;
   min-height: 75px;
@@ -55,55 +53,71 @@ header .box {
   bottom: 0;
 }
 
-@media(min-width: 768px) {
-  header {
-    background-color: #2a527b;
-    min-height: 75px;
-    display: flex;
-    justify-content: space-between;
-  }
+header {
+  background-color: #885EAD;
+  min-height: 75px;
+  display: flex;
+  justify-content: space-between;
 }
-/*NEED RESPONSIVE DROPDOWN MENU*/
-.smallScreen {
+/*NEED RESPONSIVE DROPDOWN MENU hamburger********/
+
+.menu {
+  display: flex;
+  margin-left: 110px;
+}
+
+.hamburger {
   display: none;
 }
 
-@media(min-width: 320px) {
-  .largeScreen {
+@media(max-width: 1000px) {
+  .boxLogo {
+    font-size: 26px;
+  }
+  .menu {
     display: none;
   }
-}
-
-@media(min-width: 768px) {
-  .largeScreen {
-    display: flex;
-    margin-left: 110px;
+  .hamburger {
+    display: inline-block;
+    margin: 0 15px;
+    margin-top: 40px;
   }
-}
+  .hamburger .line {
+    width: 45px;
+    height: 6px;
+    background-color: #3b1261;
+    margin: 5px 5px;
+  }
+} 
 
 .headline {
-  background-color: grey;
-  height: 600px;
+  background-color: #d3d3d3;
+  min-height: 540px;
 }
 
 .container {
   display: flex;
 }
-#cornellPrison {
+.cornellPrison {
   width:700px;
   height: 400px;
-  margin-top: 60px;
   margin-left: 80px;
 }
 
 .cornellPrisonBlurb {
   width: 450px;
   padding: 20px;
-  float: right; /*need to do flexbox for this. */
+  float: right; 
 }
 
 .container .cornellPrisonBox {
   flex-grow: 1;
+}
+
+.cornellPrison {
+  width: 100%;
+  min-width: 300px;
+  height: auto;
 }
 
 .first {
@@ -111,6 +125,8 @@ header .box {
   font-weight:900;
   text-align: center;  
   margin-bottom: 0;
+  margin-top: 0;
+  color: #3b1261;
 }
 
 .secondary {
@@ -118,20 +134,20 @@ header .box {
   font-weight: 400;
   text-align: center;  
   margin-top: 0;
-}
-
-@media(min-width: 320px) {
-  .yellowBackground {
-    width: 100%;
-    background-color: #ffea00;
-    min-height: 200px;
-  }
+  color: #885EAD;
 }
 
 .pellDescription {
   width: 70%;
   margin: auto;
   padding: 30px 0;
+  color: #d3d3d3;
+}
+
+.yellowBackground { /*change name of class */
+  width: 100%;
+  background-color: #885EAD;
+  min-height: 200px;
 }
 
 .readmore, .readless {
@@ -142,19 +158,22 @@ header .box {
   font-weight: 800;
   font-size: 20px;
 }
+.readmore a {
+  color: #3b1261;   
+}
+
+.readless a {
+  color: #3b1261;     
+}
 
 #show-this-on-click {
   width: 70%;
   margin: auto;
 }
-
-@media(min-width: 320px) {
-  .testimonial {
-    width: 100%; 
-    display: flex;
-    flex-direction: column;
-    min-height: 140px;
-  }
+/*
+.testimonial { 
+  background-color: #ffff7f;
+  min-height: 100px;
 }
 
 .quote {
@@ -162,20 +181,25 @@ header .box {
   font-size: 20px;
   font-weight: 700;
   font-style: italic;
-  padding: 15px 30px 2px;
 }
+*/
 
-.name {
-  color: black;
-  text-align: right;
-  padding-right: 100px;
-  font-size: 24px;
-  font-weight: 400;
-  margin-top: -8px;
-}
+.darkGreyBackground { 
+  width: 100%;
+  background-color: #2a2a2a;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-height: 220px;
+}  
 
 h1 {
   text-align: center;
+}
+
+#schoolMap {
+  height: 750px;
+  width 100%;
 }
 
 .takeaction {
@@ -185,60 +209,53 @@ h1 {
   font-size: 28px;
 }
 
-.takeActionForm {
-  width: 40%;
-  margin-right: auto;
-  margin-left: auto;
-  border: white dashed 4px; 
-  padding: 10px;
-}
-
-.takeActionForm p {
+.formComponent, .takeActionForm {
+  display: inline-block;
   text-align: center;
 }    
 
-/*form {
-  width: 40%;
-  margin-right: auto;
-  margin-left: auto;
+button {
+  color: #3b1261;
+  border: #3b1261 solid 2px;
+  background-color: #d3d3d3;
+  border-radius: 5px;
+  padding: 5px 20px;
+  font-weight: 600;
+  margin-top: 20px;
 }
-*/
 
-
-
-
-
-
-/*@media(min-width: 320px) { */
-  button {
-    background-color: #f9e42e;
-    font-size: 16px;
-    border-radius: 5px;
-    color: black;
-    font-weight: bold;
-    width: 200px;
-  }
-
-
-/*@media(min-width: 768px) {
-  button {
-    width: 50%;
-    margin-right: auto;
-    margin-left: auto;
-  }
+button:hover {
+  background-color: #885ead;
 }
-*/
 
-@media(min-width: 320px) {
-  .darkGreyBackground { /*changename */
-    width: 100%;
-    background-color: #2a527b;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    min-height: 220px;
-  }
+.formComponent {
+  width: 250px;
+  height:30px;
+  margin: 30px;
+  margin-bottom: 20px;
+  color: #d3d3d3;
+  font-size: 16px;
 }
+
+.formComponent input {
+  width: 200px;
+  height: 28px;
+  background-color: #2a2a2a;
+  border: none;
+  border-bottom: #885ead solid 1px;
+  color: #d3d3d3;
+}
+
+.floatingFirstname, .floatingLastname, .floatingEmail {
+  position: absolute;
+  transform: translateX(-200px) translateY(4px);
+}
+
+.floatDown {
+  transform: translateX(-200px) translateY(26px) scale(0.85);
+  transition: transform 200ms ease;
+}
+
 
 #map{
   width: 100%;
@@ -250,42 +267,9 @@ h1 {
   margin:0;
 }
 
-.social {
+.social { /*redo social media*/
   display: inline-flex;
   list-style-type: none;
-}
-
-@media(min-width: 320px) {
-  .socialMedia {
-    width: 50%;
-    margin: auto;
-  }
-  .Facebook {
-    margin-left: 15px;
-  }  
-}
-
-@media(min-width: 375px) {
-  .socialMedia {
-    width: 45%;
-    margin: auto;
-  }
-  .Facebook {
-    margin-left: 20px;    
-  }
-}
-
-@media(min-width: 414px) {
-  .Facebook {
-    margin-left: 35px;    
-  }
-}
-
-@media(min-width: 768px) {
-  .socialMedia {
-    width: 25%;
-    margin: auto; 
-  }
 }
 
 #top {
@@ -295,43 +279,6 @@ h1 {
   margin: 20px 20px 5px;
 }
 
-/******THIS IS FOR THE FORM*******/
-
-
-
-body {
-  font-family: Helvetica, Arial, sans-seif;
-}
-
-button,
-input[type="text"],
-textarea {
-  border: 1px solid #ccc;
-  font-size: 1em;
-}
-
-button {
-  padding: 8px 16px;
-  text-transform: uppercase; /*what is this?*/
-}
-
-form > div {
-  margin-bottom: 15px;
-  display: flex;
-  align-items: baseline;
-}
-
-label,
-button {
-  cursor: pointer;
-}
-
-
-#signUp {
-  display: none;
-  padding: 10px;
-  margin: 10px 0;
-}
 
 
 

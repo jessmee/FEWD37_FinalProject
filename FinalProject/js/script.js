@@ -3,13 +3,12 @@
 //When user clicks on Read Less, extra informtion is hidden using the slide up event handler.  DONE
 //When user clciks on Back to Top, the user is taken to the top of the page.DONE
 //When user clcks on photo, more information about the picture shows to the right.
+//form animation. when user clicks on form, the labels slide down.
 
-//Maybe a slide with the quotes??
-//do javascript around quotes
+
 //Under Participating Schools, there should be an interactive map. When user clicks on the state,  the name of the school should pop up.
-//HAMBURGERWhen the viewport gets smaller, the navigation tabs turn into a hamburger with a dropdown menu.
-
-
+//HAMBURGERWhen the viewport gets smaller, the navigation tabs turn into a hamburger with a dropdown/slide in menu.
+//As viewport gets smaller, the tab for cornell prison should appear below.
 
 
 function readMore(click) { 
@@ -59,10 +58,52 @@ function readMoreAboutCornell() {
   $('.descriptionCornell').html('Here\'s more info about their program');
 }
 
+function removeLabelFirstname(event) {
+  event.preventDefault();
+  $('.floatingFirstname').addClass('floatDown');  
+}
+
+function removeLabelLastname(event) {
+  event.preventDefault();
+  $('.floatingLastname').addClass('floatDown');  
+}
+
+function removeLabelEmail(event) {
+  event.preventDefault();
+  $('.floatingEmail').addClass('floatDown');  
+}
+
+function initMap(){
+  //Map options
+  var options = {
+    zoom: 5,
+    center:{lat:36.5, lng:-97.35}
+  }
+
+  //New Map
+  var map = new
+  google.maps.Map(document.getElementById('schoolMap'), options);
+
+  
+  //Add Marker
+  var marker = new google.maps.Marker({
+    position:{lat:29.4238, lng:-95.24},
+    map: map
+  });
+  
+  var marker = new google.maps.Marker({   
+    position:{lat:38.96, lng:-76.54},
+    map: map
+  });
+}
+
 $('.readmore').click(readMore);
 $('.readless').click(readLess);
 $('#schools').click(scrollSchools);
 $('#top').click(toTheTop)
 $('#history').click(scrollHistory);
 $('#action').click(scrollAction);
-$('#cornellPrison').click(readMoreAboutCornell);
+$('.cornellPrison').click(readMoreAboutCornell);
+$('#firstname').click(removeLabelFirstname);
+$('#lastname').click(removeLabelLastname);
+$('#email').click(removeLabelEmail);

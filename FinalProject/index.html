@@ -15,16 +15,22 @@
 <header>
   <div class="boxLogo">Up with Education,</br> Down with Incarceration</div> <!--Need to think of Content-->
   <nav>
-    <ul class="largeScreen">
-      <li class="box" id="history">History</li> 
-      <li class="box" id="schools">Participating Schools</li> 
-      <li class="box" id="action">Take Action</li>
+  <div id="largeScreen">
+    <ul class="menu">
+      <li class="box" "menuList" id="history">History</li> 
+      <li class="box" "menuList" id="schools">Participating Schools</li> 
+      <li class="box" "menuList" id="action">Take Action</li>
     </ul>
-    <ul class="smallScreen">
-        <li class="box">History</li> 
-        <li class="box" id="schools">Participating Schools</li> 
-        <li class="box">Get Involved</li>
-    </ul>
+  </div>  
+  </nav>
+  <nav>
+  <div id="smallScreen">
+    <div class="hamburger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>      
+    </div>
+  </nav>
   </nav>
 </header>
 <div class="headline">
@@ -34,7 +40,7 @@
   </div>
   <section class="container">
     <div class="cornellPrisonBox">
-      <img id="cornellPrison" src="images/cornellPrison.jpg" alt="A classroom in prison">
+      <img class="cornellPrison" src="images/cornellPrison.jpg" alt="A classroom in prison">
     </div>
     <div class="cornellPrisonBox">    
       <div class="cornellPrisonBlurb">
@@ -65,43 +71,43 @@
     <a href="#">Read less &gt;</a>
   </p>
 </div>
+<!--
 <div class ="testimonial">
 <p class="quote">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit voluptatem, sit exercitationem minus vero a asperiores
     Lorem ipsum dolor sit amet. sit exercitationem minus vero a asperiores, dignissimos aspernatur ratione eaque nulla neque 
     eum"</p>
   <p class="name">-John Smith</p>
-</div>
+</div> -->
 <div id="map">
   <h1>Participating Schools</h1>
   <!--Interactive Map goes here-->
+  <div id="schoolMap"></div>
 </div>
 <footer class="darkGreyBackground">
-  <p class="takeaction">Take Action!</p>
+    <p class="takeaction">Please sign up if you would like to be added to our mailing list!</p>
   <div class="takeActionForm"> 
-    <p>Please sign up if you would like to be added to our mailing list!</p>
     <form>
-      <div>
-        <label>
+      <div class="formComponent">
+        <input type="text" id="firstname"/>            
+        <label class="floatingFirstname">
           First Name:
-          <input type="text" id="firstname"/>      
         </label>
       </div>
-      <div>
-        <label>
+      <div class="formComponent">
+        <input type="text" id="lastname"/>
+        <label class="floatingLastname">
           Last Name:
-          <input type="text" id="lastname"/>
         </label>
       </div>
-      <div>
-        <label>
+      <div class="formComponent">
+        <input type="text" id="email"/>        
+        <label class="floatingEmail">
           E-Mail:
-          <input type="text" id="email"/>        
         </label>
       </div>
       <div class="signUpButton">
         <button type="submit">Sign me up!</button>
       </div>
-      <div id="signUp" class="error"></div>      
   </form>  
   </div> 
   <div class="socialMedia">
@@ -121,6 +127,7 @@
   <p id="top">Back to the top</p>
 </footer>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=MY_API_key&callback=initMap" async defer></script>
 <script src="js/script.js"></script>
 </body>
 </html>
