@@ -80,7 +80,7 @@ function removeLabelEmail(event) {
 function initMap(){
   //Map options
   var options = {
-    zoom: 5,
+    zoom: 4.75,
     center:{lat:36.5, lng:-97.35}
   }
 
@@ -332,6 +332,41 @@ if(props.content){
 }
 }
 }
+
+
+
+
+
+
+function findSchool(event) {
+  event.preventDefault(); 
+
+  var city = $('#school-type').val();
+  city = city.toLowerCase();
+    
+  if (city === 'ca' || city === 'california') {
+    $('.schoolAppears').html('ca');
+  } else if (city === 'san francisco' || city === 'san fran' || city === 'bay area' || city === 'sf') {
+    $('body').removeClass().addClass('sf');           
+  } else if (city === 'los angeles' || city === 'la' || city === 'lax') {
+    $('body').removeClass().addClass('la');           
+  } else if (city === 'austin' || city === 'atx') {
+    $('body').removeClass().addClass('austin');
+  } else if (city === 'sydney' || city === 'syd') {
+    $('body').removeClass().addClass('sydney');      
+  } else {
+    $('body').removeClass();
+    return error(); //using an alert box, but how can I make a popup?
+    event.default();
+    }  
+  }
+  
+  $('#submit-btn').click(findSchool);
+
+
+
+
+
 
 $('.readmore').click(readMore);
 $('.readless').click(readLess);

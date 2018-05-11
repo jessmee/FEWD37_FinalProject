@@ -72,18 +72,22 @@
     <a href="#">Read less &gt;</a>
   </p>
 </div>
-<!--
-<div class ="testimonial">
-<p class="quote">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit voluptatem, sit exercitationem minus vero a asperiores
-    Lorem ipsum dolor sit amet. sit exercitationem minus vero a asperiores, dignissimos aspernatur ratione eaque nulla neque 
-    eum"</p>
-  <p class="name">-John Smith</p>
-</div> -->
 <div id="map">
-  <h1>Participating Schools</h1>
-  <!--Interactive Map goes here-->
-  <div id="schoolMap"></div>
-</div>
+  <h1 class="paticipatingSchools">Participating Schools</h1>
+  <div class="schools">
+    <div id="schoolFinder">
+      <p class="findMessage">Type in your state and find the school(s) participating in your state.</p>
+      <div class="schoolContainer">
+				<form>
+					<input type="text" id="school-type" placeholder="Enter a state">
+          <input type="submit" value="Submit" id="submit-btn">
+          <p class="schoolAppears"></p>
+				</form>
+			</div>
+    </div>
+    <div id="schoolMap"></div>
+  </div>
+  </div>
 <footer class="darkGreyBackground">
     <p class="takeaction">Please sign up if you would like to be added to our mailing list!</p>
   <div class="takeActionForm"> 
@@ -128,7 +132,7 @@
   <p id="top">Back to the top</p>
 </footer>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=MY_API_KEY&callback=initMap" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_TNHyrAcoNgBHha-K_RTyIeAFQkUmpko&callback=initMap" async defer></script>
 <script src="js/script.js"></script>
 </body>
 </html>
