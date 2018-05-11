@@ -4,11 +4,12 @@
 //When user clciks on Back to Top, the user is taken to the top of the page.DONE
 //When user clcks on photo, more information about the picture shows to the right.
 //form animation. when user clicks on form, the labels slide down.
-
-
 //Under Participating Schools, there should be an interactive map. When user clicks on the state,  the name of the school should pop up.
+
+
 //HAMBURGERWhen the viewport gets smaller, the navigation tabs turn into a hamburger with a dropdown/slide in menu.
-//As viewport gets smaller, the tab for cornell prison should appear below.
+//form validation, play with forms more
+//thank you popupc- call congress! 
 
 
 function readMore(click) { 
@@ -52,11 +53,14 @@ function toTheTop(click) {
     scrollTop: $('.boxLogo').offset().top
   });
 };
-
+/*
 function readMoreAboutCornell() {
-  $('.titleCornell').html('CornellPrison');
-  $('.descriptionCornell').html('Here\'s more info about their program');
+  $('.actualQuote').html('Cornell Prison Program', 1000);
+  $('.actualQuote').css('color', '#2a2a2a');
+  $('.marcusQuote').html('Here\'s more info about their program.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit voluptatem, sit exercitationem minus vero a asperiores, dignissimos aspernatur ratione eaque nulla neque eum commodi ducimus? Quaerat libero suscipit lab. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit voluptatem, sit exercitationem minus vero a asperiores, dignissimos aspernatur ratione eaque nulla neque eum commodi ducimus? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat libero suscipit laborum maiores.');
 }
+*/
+
 
 function removeLabelFirstname(event) {
   event.preventDefault();
@@ -329,15 +333,13 @@ if(props.content){
 }
 }
 
-
-
 $('.readmore').click(readMore);
 $('.readless').click(readLess);
 $('#schools').click(scrollSchools);
 $('#top').click(toTheTop)
 $('#history').click(scrollHistory);
 $('#action').click(scrollAction);
-$('.cornellPrison').click(readMoreAboutCornell);
+//$('.cornellPrison').click(readMoreAboutCornell);
 $('#firstname').click(removeLabelFirstname);
 $('#lastname').click(removeLabelLastname);
 $('#email').click(removeLabelEmail);

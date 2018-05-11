@@ -93,32 +93,58 @@ header {
 .headline {
   background-color: #d3d3d3;
   min-height: 540px;
+  position: relative;
 }
 
 .container {
   display: flex;
 }
+
 .cornellPrison {
-  width:700px;
-  height: 400px;
-  margin-left: 80px;
+  display: block;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.cornellPrisonBlurb {
-  width: 450px;
-  padding: 20px;
-  float: right; 
+.quoteBox {
+  position: absolute;
+  right:0;
+  left: 0;
+  bottom: 0;
+  /* width: 450px; */
+  background-color: rgba(0, 0, 0, 0.5);
 }
+.quote {
+  /* width: 450px; */
+  /*border: 2px solid black;*/
+  /* z-index: 10; */
+  /* position: absolute; */
+  /* -webkit-transform: translate(-450px, 600px); */
+  color: white;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 30px;
+}
+
+@media (min-width: 1000px){
+  .quoteBox {
+    left: auto;
+    width: 450px;
+  }
+}
+
 
 .container .cornellPrisonBox {
   flex-grow: 1;
 }
-
+/*
 .cornellPrison {
   width: 100%;
   min-width: 300px;
   height: auto;
 }
+*/
 
 .first {
   font-size: 44px;
@@ -170,19 +196,6 @@ header {
   width: 70%;
   margin: auto;
 }
-/*
-.testimonial { 
-  background-color: #ffff7f;
-  min-height: 100px;
-}
-
-.quote {
-  color: black;
-  font-size: 20px;
-  font-weight: 700;
-  font-style: italic;
-}
-*/
 
 .darkGreyBackground { 
   width: 100%;
