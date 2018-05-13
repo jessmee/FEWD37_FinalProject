@@ -59,6 +59,18 @@ function readMoreAboutCornell() {
   $('.marcusQuote').html('Here\'s more info about their program.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit voluptatem, sit exercitationem minus vero a asperiores, dignissimos aspernatur ratione eaque nulla neque eum commodi ducimus? Quaerat libero suscipit lab. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit voluptatem, sit exercitationem minus vero a asperiores, dignissimos aspernatur ratione eaque nulla neque eum commodi ducimus? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat libero suscipit laborum maiores.');
 }
 */
+/*
+function navigationOpens() {
+  $('#smallScreen').addClass('dropdown');
+}
+
+$('.hamburger').click(navigationOpens);
+*/
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+$('.dropbtn').click(myFunction);
 
 
 
@@ -391,4 +403,20 @@ $('#firstname').click(removeLabelFirstname);
 $('#lastname').click(removeLabelLastname);
 $('#email').click(removeLabelEmail);
 $('#submit-btn').click(findSchool);
-$('signUpButton').submit(signMeUp);
+$('.signUpButton').submit(signMeUp);
+//$('.hamburger').click(navigationOpens);
+
+
+/*
+var menu = document.querySelector('.hamburger');
+var main = document.querySelector('main');
+var drawer = document.querySelector('.nav');
+
+menu.addEventListener('click', function(e) {
+  drawer.classList.toggle('open');
+  e.stopPropagation();
+});
+main.addEventListener('click', function() {
+  drawer.classList.remove('open');
+});
+*/

@@ -19,20 +19,23 @@
   <header>
     <div class="boxLogo">Up with Education,</br> Down with Incarceration</div> <!--Need to think of Content-->
     <nav>
-    <div id="largeScreen">
-      <ul class="menu">
-        <li class="box" "menuList" id="history">History</li> 
-        <li class="box" "menuList" id="schools">Participating Schools</li> 
-        <li class="box" "menuList" id="action">Take Action</li>
+    <div id="largeScreen" class="nav">
+      <ul class="nav_list">
+        <li class="box" "nav_item" id="history">History</li> 
+        <li class="box" "nav_item" id="schools">Participating Schools</li> 
+        <li class="box" "nav_item" id="action">Take Action</li>
       </ul>
     </div>  
     </nav>
     <nav>
       <div id="smallScreen">
-        <div class="hamburger">
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>      
+        <div class="dropdown">
+        <button class="dropbtn">Menu</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+          </div>
         </div>
       </div>
     </nav>
