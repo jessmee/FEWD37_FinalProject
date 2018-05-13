@@ -125,6 +125,13 @@ header {
   font-weight: 900;
   font-style: italic;
   font-size: 30px;
+  text-align: center;
+}
+
+.quoteAuthor {
+  font-style: initial;
+  padding: 0;
+  margin-bottom: 5px;
 }
 
 @media (min-width: 1000px){
@@ -135,7 +142,7 @@ header {
 }
 
 
-.container .cornellPrisonBox {
+.container .images {
   flex-grow: 1;
 }
 
@@ -144,7 +151,6 @@ header {
   height: 650px;
   z-index: 100;
   background-color: white;
-  /*width: calc(100%-30%px);*/
 }
 
 
@@ -185,7 +191,7 @@ header {
   color: #d3d3d3;
 }
 
-.yellowBackground { /*change name of class */
+.purpleBackground { /*change name of class */
   width: 100%;
   background-color: #885EAD;
   min-height: 200px;
@@ -285,6 +291,13 @@ button:hover {
 }
 
 
+.error {
+  width: 200px;
+  height: 50px;
+  font: white;
+  border: white;
+}
+
 #map{
   width: 100%;
   min-height: 400px;
@@ -295,11 +308,20 @@ button:hover {
   margin:0;
   padding: 10px;
 }
-
+/*
+.socialMedia {
+  text-align: center;
+}
+*/
 .social { /*redo social media*/
   display: inline-flex;
   list-style-type: none;
 }
+
+.twitter {
+  margin-right: 10px;
+}
+
 
 #top {
   color: white;
@@ -308,7 +330,11 @@ button:hover {
   margin: 20px 20px 5px;
 }
 
-
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+}
 
 
 

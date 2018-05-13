@@ -9,7 +9,6 @@
 
 //HAMBURGERWhen the viewport gets smaller, the navigation tabs turn into a hamburger with a dropdown/slide in menu.
 //form validation, play with forms more
-//thank you popupc- call congress! 
 
 
 function readMore(click) { 
@@ -60,6 +59,7 @@ function readMoreAboutCornell() {
   $('.marcusQuote').html('Here\'s more info about their program.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit voluptatem, sit exercitationem minus vero a asperiores, dignissimos aspernatur ratione eaque nulla neque eum commodi ducimus? Quaerat libero suscipit lab. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit voluptatem, sit exercitationem minus vero a asperiores, dignissimos aspernatur ratione eaque nulla neque eum commodi ducimus? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat libero suscipit laborum maiores.');
 }
 */
+
 
 
 function removeLabelFirstname(event) {
@@ -334,10 +334,6 @@ if(props.content){
 }
 
 
-
-
-
-
 function findSchool(event) {
   event.preventDefault(); 
 
@@ -361,11 +357,27 @@ function findSchool(event) {
     }  
   }
   
-  $('#submit-btn').click(findSchool);
 
 
+function signMeUp(event) {
+  event.preventDefault();
 
+  var firstname = $('#firstname').val;
+  var lastname = $('#lastname').val;
+  var email = $('#email').val;
+  
 
+  if (firstname === "" || lastname === "" || email === "") {
+
+    $('#validationMessage')
+      .removeClass()
+      .addClass('error')
+      .html('Please fill out the form.');
+  }
+
+}
+
+  
 
 
 $('.readmore').click(readMore);
@@ -378,3 +390,5 @@ $('#action').click(scrollAction);
 $('#firstname').click(removeLabelFirstname);
 $('#lastname').click(removeLabelLastname);
 $('#email').click(removeLabelEmail);
+$('#submit-btn').click(findSchool);
+$('signUpButton').submit(signMeUp);
