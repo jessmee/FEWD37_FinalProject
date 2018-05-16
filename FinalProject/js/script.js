@@ -9,6 +9,7 @@
 
 //HAMBURGERWhen the viewport gets smaller, the navigation tabs turn into a hamburger with a dropdown/slide in menu.
 //form validation, play with forms more
+//thank you popupc- call congress! 
 
 
 function readMore(click) { 
@@ -59,19 +60,6 @@ function readMoreAboutCornell() {
   $('.marcusQuote').html('Here\'s more info about their program.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit voluptatem, sit exercitationem minus vero a asperiores, dignissimos aspernatur ratione eaque nulla neque eum commodi ducimus? Quaerat libero suscipit lab. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit voluptatem, sit exercitationem minus vero a asperiores, dignissimos aspernatur ratione eaque nulla neque eum commodi ducimus? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat libero suscipit laborum maiores.');
 }
 */
-/*
-function navigationOpens() {
-  $('#smallScreen').addClass('dropdown');
-}
-
-$('.hamburger').click(navigationOpens);
-*/
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
-
-$('.dropbtn').click(myFunction);
-
 
 
 function removeLabelFirstname(event) {
@@ -346,50 +334,81 @@ if(props.content){
 }
 
 
+
+
+
+
 function findSchool(event) {
   event.preventDefault(); 
 
-  var city = $('#school-type').val();
-  city = city.toLowerCase();
+  var state = $('#school-type').val();
+  state = state.toLowerCase();
     
-  if (city === 'ca' || city === 'california') {
-    $('.schoolAppears').html('ca');
-  } else if (city === 'san francisco' || city === 'san fran' || city === 'bay area' || city === 'sf') {
-    $('body').removeClass().addClass('sf');           
-  } else if (city === 'los angeles' || city === 'la' || city === 'lax') {
-    $('body').removeClass().addClass('la');           
-  } else if (city === 'austin' || city === 'atx') {
-    $('body').removeClass().addClass('austin');
-  } else if (city === 'sydney' || city === 'syd') {
-    $('body').removeClass().addClass('sydney');      
-  } else {
-    $('body').removeClass();
-    return error(); //using an alert box, but how can I make a popup?
-    event.default();
-    }  
-  }
-  
-
-
-function signMeUp(event) {
-  event.preventDefault();
-
-  var firstname = $('#firstname').val;
-  var lastname = $('#lastname').val;
-  var email = $('#email').val;
-  
-
-  if (firstname === "" || lastname === "" || email === "") {
-
-    $('#validationMessage')
-      .removeClass()
-      .addClass('error')
-      .html('Please fill out the form.');
-  }
-
+ if (state === 'tx' || state === 'texas') {
+    $('.schoolAppears').html('Alvin Community College </br> Cedar Valley College </br> Clarendon College </br> Lamar State College - Port Arthur </br> Lee College </br> Mountain View College </br> Southwest Texas Junior College </br> University of Houston - Clear Lake  </br> Wiley College');      
+  } else if (state === 'md' || state === 'maryland') {
+    $('.schoolAppears').html('Anne Arundel Community College </br> Goucher College </br> University of Baltimore </br> Wor-Wic Community College'); 
+ } else if (state === 'ar' || state === 'arkansas') {
+    $('.schoolAppears').html('Arkansas State University - Newport </br> Shorter College'); 
+  } else if (state === 'oh' || state === 'ohio') {
+    $('.schoolAppears').html('Ashland University'); 
+   } else if (state === 'ct' || state === 'connecticut') {
+    $('.schoolAppears').html('Asnuntuck Community College </br> Middlesex Community College </br> Quinebaug Valley Community College </br> Three Rivers Community College');
+   } else if (state === 'al' || state === 'alabama') {
+    $('.schoolAppears').html('Auburn University  </br> Calhoun Community College  </br> Ingram State Technical College');
+  } else if (state === 'ca' || state === 'california') {
+    $('.schoolAppears').html('California State University Los Angeles </br> Chaffey Community College </br> Columbia College  </br> Cuesta College </br> Southwestern Community College District');
+    } else if (state === 'ny' || state === 'new york') {
+    $('.schoolAppears').html('Bard College </br> CUNY Hostos Community College </br> CUNY LaGuardia Community College </br> CUNY John Jay College of Criminal Justice </br> Marymount Manhattan College </br> Mercy College </br> North Country Community College </br> Nyack College');
+    } else if (state === 'vt' || state === 'vermont') {
+    $('.schoolAppears').html('Bennington College');
+    } else if (state === 'pa' || state === 'pennsylvania') {
+    $('.schoolAppears').html('Bloomsburg University of Pennsylvania </br> Indiana University of Pennsylvania </br> Lehigh Carbon Community College </br> Villanova University');
+    } else if (state === 'wa' || state === 'washington') {
+    $('.schoolAppears').html('Centralia College </br> Seattle Central Community College </br> Tacoma Community College');
+    } else if (state === 'or' || state === 'oregon') {
+    $('.schoolAppears').html('Chemeketa Community College');
+    } else if (state === 'ok' || state === 'oklahoma') {
+    $('.schoolAppears').html('Connors State College </br> Langston University </br> Tulsa Community College');
+    } else if (state === 'mn' || state === 'minnesota') {
+    $('.schoolAppears').html('Fond du Lac Tribal & Community College </br> Pine Technical and Community College </br> South Central College');
+    } else if (state === 'va' || state === 'virginia') {
+    $('.schoolAppears').html('Danville Community College </br> Rappahannock Community College');
+    } else if (state === 'mi' || state === 'michigan') {
+    $('.schoolAppears').html('Delta College </br> Jackson College </br> Mott Community College');
+   } else if (state === 'il' || state === 'illinois') {
+    $('.schoolAppears').html('North Park University </br> Roosevelt University');
+   } else if (state === 'sc' || state === 'south carolina') {
+    $('.schoolAppears').html('Northeastern Technical College');
+   } else if (state === 'ia' || state === 'iowa') {
+    $('.schoolAppears').html('Iowa Central Community College');
+   } else if (state === 'ne' || state === 'nebraska') {
+    $('.schoolAppears').html('Metropolitan Community College');
+   } else if (state === 'wi' || state === 'wisconsin') {
+    $('.schoolAppears').html('Milwaukee Area Technical College');
+    } else if (state === 'sc' || state === 'south carolina') {
+    $('.schoolAppears').html('Northeastern Technical College');
+    } else if (state === 'ma' || state === 'massachusetts') {
+    $('.schoolAppears').html('Mount Wachusett Community College');
+    } else if (state === 'nj' || state === 'new jersey') {
+    $('.schoolAppears').html('Rutgers, the State University of New Jersey and Raritan Valley Community College');
+    } else if (state === 'fl' || state === 'florida') {
+    $('.schoolAppears').html('Florida Gateway College');
+    } else if (state === 'wv' || state === 'west virginia') {
+    $('.schoolAppears').html('Glenville State College');
+    } else if (state === 'in' || state === 'indiana') {
+    $('.schoolAppears').html('Holy Cross College');
+    } else {
+     $('.schoolAppears').html('There are no schools participating in this state.'); 
+    }
 }
 
-  
+
+  $('#submit-btn').click(findSchool);
+
+
+
+
 
 
 $('.readmore').click(readMore);
@@ -402,21 +421,3 @@ $('#action').click(scrollAction);
 $('#firstname').click(removeLabelFirstname);
 $('#lastname').click(removeLabelLastname);
 $('#email').click(removeLabelEmail);
-$('#submit-btn').click(findSchool);
-$('.signUpButton').submit(signMeUp);
-//$('.hamburger').click(navigationOpens);
-
-
-/*
-var menu = document.querySelector('.hamburger');
-var main = document.querySelector('main');
-var drawer = document.querySelector('.nav');
-
-menu.addEventListener('click', function(e) {
-  drawer.classList.toggle('open');
-  e.stopPropagation();
-});
-main.addEventListener('click', function() {
-  drawer.classList.remove('open');
-});
-*/

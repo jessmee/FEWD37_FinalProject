@@ -3,7 +3,8 @@ html {
 }
 
 body {
-/*  background: url(../images/cornellPrison.jpg) no-repeat center top; /*photo credit: http://www.rochester.edu/newscenter/rochesters-prison-education-program-aims-to-transform-lives-of-inmates-undergraduates/ */
+/*  background: url(../images/cornellPrison.jpg) no-repeat center top; /*photo credit: http://www.rochester.edu/newscenter/rochesters-prison-edu
+  cation-program-aims-to-transform-lives-of-inmates-undergraduates/ */
   /*background-size: cover; */ 
   font-family: 'Open Sans', sans-serif;
 }
@@ -61,23 +62,26 @@ header {
 }
 /*NEED RESPONSIVE DROPDOWN MENU hamburger********/
 
-.nav_list {
+.menu {
   display: flex;
   margin-left: 110px;
 }
 
-.dropbtn, .dropdown-content {
+.hamburger {
   display: none;
+}
+
+#history, #schools, #action {
+  list-style-type: none;
 }
 
 @media(max-width: 1000px) {
   .boxLogo {
     font-size: 26px;
   }
-  .nav_list {
+  .menu {
     display: none;
   }
-  /*
   .hamburger {
     display: inline-block;
     margin: 0 15px;
@@ -89,51 +93,7 @@ header {
     background-color: #3b1261;
     margin: 5px 5px;
   }
-  */
-
-  .dropbtn {
-    background-color: white;
-    color: black;
-    font-size: 16px;
-    cursor: pointer;
-    display: inline-block;    
-  }
-/*
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  */
-
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    min-width: 160px;
-    overflow: auto;
-    z-index: 1;
-  }
-
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  .show {
-    display:block;
-  }
-}
-
-
-
-
-
-
-
-
-
-
- 
+} 
 
 .headline {
   background-color: #d3d3d3;
@@ -170,13 +130,6 @@ header {
   font-weight: 900;
   font-style: italic;
   font-size: 30px;
-  text-align: center;
-}
-
-.quoteAuthor {
-  font-style: initial;
-  padding: 0;
-  margin-bottom: 5px;
 }
 
 @media (min-width: 1000px){
@@ -187,7 +140,7 @@ header {
 }
 
 
-.container .images {
+.container .cornellPrisonBox {
   flex-grow: 1;
 }
 
@@ -196,6 +149,7 @@ header {
   height: 650px;
   z-index: 100;
   background-color: white;
+  /*width: calc(100%-30%px);*/
 }
 
 
@@ -236,7 +190,7 @@ header {
   color: #d3d3d3;
 }
 
-.purpleBackground { /*change name of class */
+.yellowBackground { /*change name of class */
   width: 100%;
   background-color: #885EAD;
   min-height: 200px;
@@ -336,13 +290,6 @@ button:hover {
 }
 
 
-.error {
-  width: 200px;
-  height: 50px;
-  font: white;
-  border: white;
-}
-
 #map{
   width: 100%;
   min-height: 400px;
@@ -353,20 +300,11 @@ button:hover {
   margin:0;
   padding: 10px;
 }
-/*
-.socialMedia {
-  text-align: center;
-}
-*/
+
 .social { /*redo social media*/
   display: inline-flex;
   list-style-type: none;
 }
-
-.twitter {
-  margin-right: 10px;
-}
-
 
 #top {
   color: white;

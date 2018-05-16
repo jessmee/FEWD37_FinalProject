@@ -1,148 +1,139 @@
-<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <!--change fonts-->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600,800" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Second Chance</title>
-
   <!-- external CSS link -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
-
 </head>
-
 <body>
-  <header>
-    <div class="boxLogo">Up with Education,</br> Down with Incarceration</div> <!--Need to think of Content-->
-    <nav>
-    <div id="largeScreen" class="nav">
-      <ul class="nav_list">
-        <li class="box" "nav_item" id="history">History</li> 
-        <li class="box" "nav_item" id="schools">Participating Schools</li> 
-        <li class="box" "nav_item" id="action">Take Action</li>
-      </ul>
-    </div>  
-    </nav>
-    <nav>
-      <div id="smallScreen">
-        <div class="dropdown">
-        <button class="dropbtn">Menu</button>
-          <div id="myDropdown" class="dropdown-content">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-          </div>
-        </div>
-      </div>
-    </nav>
-  </header>
-  <div class="headline">
-    <div class="flexBox">
-      <p class="first">The Second Chance Pell Pilot Program</p>
-      <p class="secondary">Expanding educational opportunities is crucial and necessary for criminal justice reform.</p>    
+<header>
+  <div class="boxLogo">Up with Education,</br> Down with Incarceration</div> <!--Need to think of Content-->
+  <nav>
+  <div id="largeScreen">
+    <ul class="menu">
+      <li class="box" "menuList" id="history">History</li> 
+      <li class="box" "menuList" id="schools">Participating Schools</li> 
+      <li class="box" "menuList" id="action">Take Action</li>
+    </ul>
+  </div>  
+  </nav>
+  <nav>
+  <div id="smallScreen">
+    <div class="hamburger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>      
     </div>
-    <section class="container">
-      <div class="images">
-        <div><img class="cornellPrison" src="images/cornellPrison.jpg" alt="A classroom in prison"></div>
-        <div class="quoteBox">    
-        <div class="quote">
-          <h2 class="actualQuote"></h2>
-          <p class="marcusQuote">"Even though I was locked up, taking college classes helped me forget that I wasn't free"</p>
-          <p class="quoteAuthor">Marcus Lilly</p>       
-        </div>
-      </div>
-    </div>  
-    </section>
+  </nav>
+  </nav>
+</header>
+<div class="headline">
+  <div class="flexBox">
+    <p class="first">The Second Chance Pell Pilot Program</p>
+    <p class="secondary">Expanding educational opportunities is crucial and necessary for criminal justice reform.</p>    
   </div>
-  <div class="purpleBackground">
-    <p class="pellDescription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit voluptatem, sit exercitationem minus vero 
-    a asperiores, dignissimos aspernatur ratione eaque nulla neque eum commodi ducimus? Quaerat libero suscipit lab. Lorem ipsum dolor sit
-    amet, consectetur adipisicing elit. Odit voluptatem, sit exercitationem minus vero a asperiores, dignissimos aspernatur ratione eaque 
-    nulla neque eum commodi ducimus? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat libero suscipit laborum maiores.</p>
-    <p class="readmore">
-      <a href="#">Read more &gt;</a>
-    </p>
-    <p class="hide" id="show-this-on-click">Maecenas quis auctor dui. Ut porta aliquam lorem, at volutpat orci commodo a. Suspendisse nunc orci, porttitor ac sapien
-    a,one eaque nulla neque eum commodi ducimus? Quaerat libero suscipit lab. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit voluptatem, 
-    sit exercitationem minus vero a asperiores, dignissimos aspernatur ratione eaque nulla neque 
-    eum commodi ducimus? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat libero 
-    suscipit laborum maiores. Maecenas quis auctor dui. Ut porta aliquam lorem, at volutpat orci commodo a. Suspendisse nunc orci,
-    porttitor ac sapien a,one eaque nulla neque eum commodi ducimus? Quaerat libero suscipit lab. 
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit voluptatem, sit exercitationem 
-    minus vero a asperiores, dignissimos aspernatur ratione eaque nulla neque eum commodi ducimus?
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat libero suscipit laborum maiores. </p>
-    <p class="readless hide">
-      <a href="#">Read less &gt;</a>
-    </p>
-  </div>
-  <div id="map">
-    <h1 class="paticipatingSchools">Participating Schools</h1>
-    <div class="schools">
-      <div id="schoolFinder">
-        <p class="findMessage">Type in your state and find the school(s) participating in your state.</p>
-        <div class="schoolContainer">
-			    <form>
-				    <input type="text" id="school-type" placeholder="Enter a state">
-            <input type="submit" value="Submit" id="submit-btn">
-              <p class="schoolAppears"></p>
-			    </form>
-		    </div>
+  <section class="container">
+    <div class="cornellPrisonBox">
+      <img class="cornellPrison" src="images/cornellPrison.jpg" alt="A classroom in prison">
+    
+    <div class="quoteBox">    
+      <div class="quote">
+        <h2 class="actualQuote"></h2>
+        <p class="marcusQuote">"Even though I was locked up, taking college classes helped me forget that I wasn't free"</p>       
       </div>
-      <div id="schoolMap"></div>
     </div>
+    </div></div>  
+  </section>
+</div>
+<div class="yellowBackground">
+  <p class="pellDescription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit voluptatem, sit exercitationem minus vero 
+  a asperiores, dignissimos aspernatur ratione eaque nulla neque eum commodi ducimus? Quaerat libero suscipit lab. Lorem ipsum dolor sit
+  amet, consectetur adipisicing elit. Odit voluptatem, sit exercitationem minus vero a asperiores, dignissimos aspernatur ratione eaque 
+  nulla neque eum commodi ducimus? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat libero suscipit laborum maiores.</p>
+  <p class="readmore">
+    <a href="#">Read more &gt;</a>
+  </p>
+  <p class="hide" id="show-this-on-click">Maecenas quis auctor dui. Ut porta aliquam lorem, at volutpat orci commodo a. Suspendisse nunc orci, porttitor ac sapien
+  a,one eaque nulla neque eum commodi ducimus? Quaerat libero suscipit lab. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit voluptatem, 
+  sit exercitationem minus vero a asperiores, dignissimos aspernatur ratione eaque nulla neque 
+  eum commodi ducimus? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat libero 
+  suscipit laborum maiores. Maecenas quis auctor dui. Ut porta aliquam lorem, at volutpat orci commodo a. Suspendisse nunc orci,
+  porttitor ac sapien a,one eaque nulla neque eum commodi ducimus? Quaerat libero suscipit lab. 
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit voluptatem, sit exercitationem 
+  minus vero a asperiores, dignissimos aspernatur ratione eaque nulla neque eum commodi ducimus?
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat libero suscipit laborum maiores. </p>
+  <p class="readless hide">
+    <a href="#">Read less &gt;</a>
+  </p>
+</div>
+<div id="map">
+  <h1 class="paticipatingSchools">Participating Schools</h1>
+  <div class="schools">
+    <div id="schoolFinder">
+      <p class="findMessage">Type in your state and find the school(s) participating in your state.</p>
+      <div class="schoolContainer">
+				<form>
+					<input type="text" id="school-type" placeholder="Enter a state">
+          <input type="submit" value="Submit" id="submit-btn">
+          <p class="schoolAppears"></p>
+				</form>
+			</div>
+    </div>
+    <div id="schoolMap"></div>
   </div>
-  <footer class="darkGreyBackground">
+  </div>
+<footer class="darkGreyBackground">
     <p class="takeaction">Please sign up if you would like to be added to our mailing list!</p>
-    <div class="takeActionForm"> 
-      <form>
-        <div class="formComponent">
-          <input type="text" id="firstname"/>            
-          <label class="floatingFirstname">
-            First Name:
-          </label>
-        </div>
-        <div class="formComponent">
-          <input type="text" id="lastname"/>
-          <label class="floatingLastname">
-            Last Name:
-          </label>
-        </div>
-        <div class="formComponent">
-          <input type="text" id="email"/>        
-          <label class="floatingEmail">
-            E-Mail:
-          </label>
-        </div>
-        <div class="signUpButton">
-          <button type="submit">Sign me up!</button>
-        </div>
-        <div id="validationMessage"></div>
-      </form>  
-    </div>
-    <div class="bottom"> 
-      <div class="socialMedia">
-		    <ul class="social">
-          <li class="twitter">
-            <a href="#">
-              <img src="images/twitter.png" alt="Twitter logo">
-            </a>
-          </li>
-          <li class="facebook">
-            <a href="#">
-              <img src="images/facebook.png" alt="Facebook logo">
-            </a>
-          </li> 
-        </ul>
+  <div class="takeActionForm"> 
+    <form>
+      <div class="formComponent">
+        <input type="text" id="firstname"/>            
+        <label class="floatingFirstname">
+          First Name:
+        </label>
       </div>
-      <p id="top">Back to the top</p>    
+      <div class="formComponent">
+        <input type="text" id="lastname"/>
+        <label class="floatingLastname">
+          Last Name:
+        </label>
+      </div>
+      <div class="formComponent">
+        <input type="text" id="email"/>        
+        <label class="floatingEmail">
+          E-Mail:
+        </label>
+      </div>
+      <div class="signUpButton">
+        <button type="submit">Sign me up!</button>
+      </div>
+  </form>  
+  </div>
+  <div class="bottom"> 
+  <div class="socialMedia">
+		<ul class="social">
+      <li class="Twitter">
+        <a href="#">
+          <img src="images/twitter.png" alt="Twitter logo">
+        </a>
+      </li>
+      <li class="Facebook">
+        <a href="#">
+          <img src="images/facebook.png" alt="Facebook logo">
+        </a>
+      </li> 
+    </ul>
     </div>
-  </footer>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=FIXME&callback=initMap" async defer></script>
-  <script src="js/script.js"></script>
-  </body>
+    <p id="top">Back to the top</p>
+  </div>
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=FIXME=initMap" async defer></script>
+<script src="js/script.js"></script>
+</body>
 </html>
