@@ -44,6 +44,14 @@ header .box {
   font-weight: 700;
   padding: 20px;
 }
+@media (max-width: 1000px) {  
+  .boxLogo {
+    font-size: 22px;
+  }
+  header .box {
+    font-size: 16px;
+  }
+}
 
 .box::before {
   content: "";
@@ -60,7 +68,6 @@ header {
   display: flex;
   justify-content: space-between;
 }
-/*NEED RESPONSIVE DROPDOWN MENU hamburger********/
 
 .menu {
   display: flex;
@@ -75,7 +82,7 @@ header {
   list-style-type: none;
 }
 
-@media(max-width: 1000px) {
+@media(max-width: 800px) {
   .boxLogo {
     font-size: 26px;
   }
@@ -94,6 +101,14 @@ header {
     margin: 5px 5px;
   }
 } 
+
+@media (max-width: 320px) {
+  .boxLogo {
+    font-size: 18px;
+    margin: 10px;
+    padding: 0;
+  }
+}
 
 .headline {
   background-color: #d3d3d3;
@@ -117,28 +132,66 @@ header {
   right:0;
   left: 0;
   bottom: 0;
-  /* width: 450px; */
   background-color: rgba(0, 0, 0, 0.5);
 }
-.quote {
-  /* width: 450px; */
-  /*border: 2px solid black;*/
-  /* z-index: 10; */
-  /* position: absolute; */
-  /* -webkit-transform: translate(-450px, 600px); */
-  color: white;
-  font-weight: 900;
-  font-style: italic;
-  font-size: 30px;
+
+.quote, .marcusLilly {
+  text-align: center;
 }
 
-@media (min-width: 1000px){
+  .quote {
+    color: white;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 32px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .marcusLilly {
+    color: white;
+    font-weight: 1200;
+    font-size: 46px;
+    font-style: initial;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 3px;
+  }
+
+@media (min-width: 1000px) {
   .quoteBox {
     left: auto;
     width: 450px;
   }
 }
+@media (max-width: 1000px) {  
+  .quote {
+    font-size: 26px;
+    font-weight: 1000;
+  }
+  .marcusLilly {
+    font-size: 36px;
+  }
+}
 
+@media (max-width: 800px) {  
+  .quote {
+    font-size: 20px;
+  }
+  .marcusLilly {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 320px) {  
+  .quoteBox {
+    display: none;
+  }
+  .headline {
+    min-height: auto;
+  }
+}
+  
 
 .container .cornellPrisonBox {
   flex-grow: 1;
@@ -149,7 +202,6 @@ header {
   height: 650px;
   z-index: 100;
   background-color: white;
-  /*width: calc(100%-30%px);*/
 }
 
 
@@ -163,6 +215,30 @@ header {
 .schools {
   display: flex;
   flex-grow: 1;
+}
+
+@media (max-width: 320px) {  
+  .schools {
+    flex-direction: column;
+  }
+  #schoolFinder {
+    width: 100%;
+    height: 300px;
+  }
+  .schoolForm {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #submit-btn {
+    margin-left: 45px;
+  }
+  .schoolAppears {
+    text-align: center;
+  }
+  #schoolMap {
+    display: none;
+  }
 }
 
 
@@ -183,6 +259,33 @@ header {
   color: #885EAD;
 }
 
+@media (max-width: 1000px) {  
+  .first {
+    font-size: 40px;
+  }
+  .secondary {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 800px) {  
+  .first {
+    font-size: 36px;
+  }
+  .secondary {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 320px) {  
+  .first {
+    font-size: 30px;
+  }
+  .secondary {
+    font-size: 14px;
+  }
+}
+
 .pellDescription {
   width: 70%;
   margin: auto;
@@ -190,7 +293,7 @@ header {
   color: #d3d3d3;
 }
 
-.yellowBackground { /*change name of class */
+.purpleBackground { 
   width: 100%;
   background-color: #885EAD;
   min-height: 200px;
@@ -247,6 +350,16 @@ h1 {
   text-align: center;
 }    
 
+@media (max-width: 320px) {  
+  .floatingFirstName, .floatingLastname {
+    text-align: left;
+    margin-top: -20px;
+  }
+  .floatDown {
+    display: none;
+  }
+}
+
 button {
   color: #3b1261;
   border: #3b1261 solid 2px;
@@ -289,11 +402,10 @@ button:hover {
   transition: transform 200ms ease;
 }
 
-
 #map{
   width: 100%;
   min-height: 400px;
-  background-color: darkgray;
+  background-color: #d3d3d3;
 }
 
 #map h1{
@@ -301,9 +413,41 @@ button:hover {
   padding: 10px;
 }
 
-.social { /*redo social media*/
+.schoolContainer, #schoolFinder {
+  background-color: darkgray;
+}
+
+@media (max-width: 1000px) {  
+  .schoolType, .schoolForm {
+    width: 190px;
+  }
+}
+
+@media (max-width: 800px) {  
+  .schoolForm, .schoolType {
+    width: 150px;
+  }
+}
+
+.social { 
   display: inline-flex;
   list-style-type: none;
+}
+
+@media (max-width: 320px) {  /*redo*/
+  #top {
+    display: none;
+  }
+  .twitter .social .socialMedia {
+    margin-right: 0;
+  }
+  .social {
+    padding: 0;
+  }
+}
+
+.twitter {
+  margin-right: 10px;
 }
 
 #top {

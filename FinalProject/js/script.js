@@ -341,7 +341,7 @@ if(props.content){
 function findSchool(event) {
   event.preventDefault(); 
 
-  var state = $('#school-type').val();
+  var state = $('.schoolType').val();
   state = state.toLowerCase();
     
  if (state === 'tx' || state === 'texas') {
