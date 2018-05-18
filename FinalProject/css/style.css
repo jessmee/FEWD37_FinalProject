@@ -82,6 +82,14 @@ header {
   list-style-type: none;
 }
 
+p {
+  -webkit-animation-delay: 5s;
+}
+.hinge {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 @media(max-width: 800px) {
   .boxLogo {
     font-size: 26px;
@@ -458,6 +466,7 @@ button:hover, #submit-btn:hover {
   }
   #submit-btn {
     margin-top: 2px;
+}
 }
 
 .social { 
