@@ -421,3 +421,22 @@ $('#action').click(scrollAction);
 $('#firstname').click(removeLabelFirstname);
 $('#lastname').click(removeLabelLastname);
 $('#email').click(removeLabelEmail);
+
+
+$('.hamburger').click( function() {
+  
+  if( $('.hamburger ul').hasClass('show') ){
+             
+      $('.hamburger ul').removeClass('show');
+ 
+    } else {
+     
+      $('.hamburger ul').addClass('show');
+   
+    }
+ 
+   });
+ 
+   
+   
+ 

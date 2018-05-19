@@ -99,18 +99,52 @@ p {
   }
   .hamburger {
     display: inline-block;
-    margin: 0 15px;
-    margin-top: 40px;
+    margin: 35px 30px 15px 0;
+    border-top: 5px solid #3b1261;
+    border-bottom: 5px solid #3b1261;
+    position: relative;
+    width: 50px;
   }
-  .hamburger .line {
-    width: 45px;
-    height: 6px;
-    background-color: #3b1261;
-    margin: 5px 5px;
+  .hamburger::before {
+     content: '';
+     display: block;
+     height: 5px;
+     background-color: #3b1261;
+     margin: 10px 0;
+  }
+  .hamburger ul {
+    display: none;
+    width: 180px;
+    position: absolute;
+    top: 50px;
+    right: 0;
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    z-index: 100;
+  }
+  .hamburger ul li a {
+    display: block;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    padding: 20px 15px;
+    background-color: black;
+  }
+  .hamburger ul li a:hover {
+    background-color: gray;
+    color: black;
+  }
+  .hamburger-menu:hover ul {
+    display: block;
+  } 
+  .hamburger ul.show {
+    display: block;
   }
 } 
 
-@media (max-width: 320px) {
+@media (max-width: 375px) {
   .boxLogo {
     font-size: 18px;
     margin: 10px;
@@ -135,6 +169,12 @@ p {
   padding: 10px;
   text-align: center;
   font-size: 18px;
+}
+
+@media (max-width: 375px) {
+  .congress {
+    display: none;
+  }
 }
 
 .congress span {
@@ -210,7 +250,7 @@ p {
   }
 }
 
-@media (max-width: 320px) {  
+@media (max-width: 375px) {  
   .quoteBox {
     display: none;
   }
@@ -244,7 +284,7 @@ p {
   flex-grow: 1;
 }
 
-@media (max-width: 320px) {  
+@media (max-width: 375px) {  
   .schools {
     flex-direction: column;
   }
@@ -318,7 +358,7 @@ p {
   }
 }
 
-@media (max-width: 320px) {  
+@media (max-width: 375px) {  
   .first {
     font-size: 30px;
   }
@@ -391,7 +431,7 @@ h1 {
   text-align: center;
 }    
 
-@media (max-width: 320px) {  
+@media (max-width: 375px) {  
   .floatingFirstName, .floatingLastname {
     text-align: left;
     margin-top: -20px;
@@ -493,7 +533,7 @@ button:hover, #submit-btn:hover {
   list-style-type: none;
 }
 
-@media (max-width: 320px) {  
+@media (max-width: 375px) {  
   .takeAction {
     font-size: 22px;
     margin: 10px 10px 20px 10px;
