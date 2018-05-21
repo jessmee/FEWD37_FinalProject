@@ -103,7 +103,7 @@ p {
     border-top: 5px solid #3b1261;
     border-bottom: 5px solid #3b1261;
     position: relative;
-    width: 50px;
+    width: 45px;
   }
   .hamburger::before {
      content: '';
@@ -117,7 +117,7 @@ p {
     width: 180px;
     position: absolute;
     top: 50px;
-    right: 0;
+    right: -30px;
 
     list-style: none;
     margin: 0;
@@ -127,14 +127,14 @@ p {
   .hamburger ul li a {
     display: block;
     text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
-    color: white;
-    padding: 20px 15px;
-    background-color: black;
+    color: #d3d3d3;
+    padding: 10px 15px;
+    margin: 0;
+    background-color: #3b1261;
   }
   .hamburger ul li a:hover {
-    background-color: gray;
-    color: black;
+    background-color:#2a2a2a;
+    color:#d3d3d3;
   }
   .hamburger-menu:hover ul {
     display: block;
@@ -163,7 +163,7 @@ p {
   width: 120px;
   background-color: #3b1261;
   position: fixed;
-  z-index: 999;
+  z-index: 1;
   color: #D3D3D3;
   font-weight: 600;
   padding: 10px;
@@ -434,7 +434,6 @@ h1 {
 @media (max-width: 375px) {  
   .floatingFirstName, .floatingLastname {
     text-align: left;
-    margin-top: -20px;
   }
   .floatDown {
     display: none;
@@ -508,15 +507,14 @@ button:hover, #submit-btn:hover {
   background-color: darkgray;
 }
 
-@media (max-width: 1000px) {  
-  .schoolType, .schoolForm {
-    width: 190px;
-  }
+.schoolType, .schoolForm, .submitButton {
+  margin-left: 3px;
 }
 
 @media (max-width: 800px) {  
   .schoolForm, .schoolType {
-    width: 150px;
+    width: 140px;
+    margin-left: 3px;
   }
   .submitButton {
     width: 45%;
@@ -543,10 +541,10 @@ button:hover, #submit-btn:hover {
     display: none;
   }
   .social {
-    margin-right: 0;
+    margin-left: 6px;
   }
   .bottom {
-    width: 50%;
+    width: 45%;
     margin-left: auto;
     margin-right: auto;
   }

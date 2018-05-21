@@ -26,14 +26,14 @@ function readLess(click) {
   $('.readmore').show();
 }
 
-function scrollSchools(click) { //need to go over this syntax
+function scrollSchools(click) { 
   click.preventDefault();
   $('body, html'). animate({
     scrollTop: $('#map').offset().top
   }, 2000 );  
 };
 
-function scrollHistory(click) { //need to go over this syntax
+function scrollHistory(click) { 
   click.preventDefault();
   $('body, html'). animate({
     scrollTop: $('.pellDescription').offset().top
@@ -414,9 +414,12 @@ function findSchool(event) {
 $('.readmore').click(readMore);
 $('.readless').click(readLess);
 $('#schools').click(scrollSchools);
+$('#hamburgerSchools').click(scrollSchools);
 $('#top').click(toTheTop)
 $('#history').click(scrollHistory);
+$('#hamburgerHistory').click(scrollHistory);
 $('#action').click(scrollAction);
+$('#hamburgerAction').click(scrollAction);
 //$('.cornellPrison').click(readMoreAboutCornell);
 $('#firstname').click(removeLabelFirstname);
 $('#lastname').click(removeLabelLastname);
@@ -424,17 +427,11 @@ $('#email').click(removeLabelEmail);
 
 
 $('.hamburger').click( function() {
-  
   if( $('.hamburger ul').hasClass('show') ){
-             
       $('.hamburger ul').removeClass('show');
- 
     } else {
-     
       $('.hamburger ul').addClass('show');
-   
     }
- 
    });
  
    
