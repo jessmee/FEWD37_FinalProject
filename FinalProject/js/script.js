@@ -5,11 +5,8 @@
 //When user clcks on photo, more information about the picture shows to the right.
 //form animation. when user clicks on form, the labels slide down.
 //Under Participating Schools, there should be an interactive map. When user clicks on the state,  the name of the school should pop up.
-
-
 //HAMBURGERWhen the viewport gets smaller, the navigation tabs turn into a hamburger with a dropdown/slide in menu.
 //form validation, play with forms more
-//thank you popupc- call congress! 
 
 
 function readMore(click) { 
@@ -60,7 +57,6 @@ function readMoreAboutCornell() {
   $('.marcusQuote').html('Here\'s more info about their program.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit voluptatem, sit exercitationem minus vero a asperiores, dignissimos aspernatur ratione eaque nulla neque eum commodi ducimus? Quaerat libero suscipit lab. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit voluptatem, sit exercitationem minus vero a asperiores, dignissimos aspernatur ratione eaque nulla neque eum commodi ducimus? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat libero suscipit laborum maiores.');
 }
 */
-
 
 function removeLabelFirstname(event) {
   event.preventDefault();
@@ -334,10 +330,7 @@ if(props.content){
 }
 
 
-
-
-
-
+//School finder JavaScript
 function findSchool(event) {
   event.preventDefault(); 
 
@@ -404,13 +397,6 @@ function findSchool(event) {
 }
 
 
-  $('#submit-btn').click(findSchool);
-
-
-
-
-
-
 $('.readmore').click(readMore);
 $('.readless').click(readLess);
 $('#schools').click(scrollSchools);
@@ -421,6 +407,7 @@ $('#hamburgerHistory').click(scrollHistory);
 $('#action').click(scrollAction);
 $('#hamburgerAction').click(scrollAction);
 //$('.cornellPrison').click(readMoreAboutCornell);
+$('#submit-btn').click(findSchool);
 $('#firstname').click(removeLabelFirstname);
 $('#lastname').click(removeLabelLastname);
 $('#email').click(removeLabelEmail);
@@ -434,6 +421,45 @@ $('.hamburger').click( function() {
     }
    });
  
+function signUpSubmit(event){
+
+  var firstName = $('#firstname').val();
+  var lastName = $('#lastname').val();
+  var email = $('#email').val();
+
+  if (firstName === "") {
+    event.preventDefault();
+
+    $('.floatingFirstname')
+      .removeClass()
+      .addClass('floatDown')
+      .addClass('error')
+      .html('Please enter a first name.');
+  }
+  if (lastName === "") {
+    event.preventDefault();
+
+    $('.floatingLastname')
+      .removeClass()
+      .addClass('floatDown')
+      .addClass('error')
+      .html('Please enter a last name.');
+  }    
+  if (email === "") {
+    event.preventDefault();
+
+  $('.floatingEmail')
+    .removeClass()
+    .addClass('floatDown')
+    .addClass('error')
+    .html('Please enter an e-mail.');
+  } 
+  else {
+    $('.thankYou')
+    .addClass('thankYou')
+    .html('Thank You for Signing Up!');
+  }
+}
+
+$('.signUpButton').click(signUpSubmit);
    
-   
- 

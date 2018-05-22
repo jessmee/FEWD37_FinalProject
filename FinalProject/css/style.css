@@ -296,7 +296,7 @@ p {
     height: 300px;
   }
   .schoolForm {
-    width: 50%;
+    width: 150%;
     margin-left: auto;
     margin-right: auto;
   }
@@ -305,11 +305,12 @@ p {
     font-size: 18px;
     padding: 2px;
     margin-top: 2px;
+    text-align: center;
   }
   .schoolAppears {
     font-size: 14px;
     width: 300px;
-    margin-left: -20px;
+    margin-left: 0px;
   }
   #schoolMap {
     display: none;
@@ -567,5 +568,16 @@ button:hover, #submit-btn:hover {
   margin-top: 100px;
 }
 
+.error {
+  height: 200px;
+  width: 200px;
+  color: yellow;
+}
 
+.thankYou {
+  color: yellow;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 15px;
+}
 
